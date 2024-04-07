@@ -507,11 +507,81 @@
         </section>
         <section class="join">
             <div class="container">
-                
+                <div class="join__content">
+                    <h2 class="join__content__title">
+                        <span class="color-accent">50+</span> компаний доверяют нам. Присоединяйтесь!
+                    </h2>
+                    <form action="POST" class="join__content__form">
+                            <div class="join__content__form__title">
+                                <p class="color-accent">
+                                    Бесплатный
+                                </p> 
+                                аудит документации
+                            </div>
+                            <input type="text" class="join__content__form__input" placeholder="Имя" maxlength="16"/>
+                            <input type="email" class="join__content__form__input" placeholder="E-mail" maxlength="32"/>
+                            <input type="tel" class="join__content__form__input join__content__form__input__number" placeholder="Телефон"/>
+
+                        <div class="join__content__form__checkbox">
+                            <label for="form-checkbox" class="join__content__form__checkbox__label">
+                                <input type="checkbox" class="join__content__form__checkbox__label__input" id="form-checkbox">
+                                <span class="join__content__form__checkbox__label__fake"></span>
+                                <span class="join__content__form__checkbox__label__span">
+                                    Согласие на обработку персональных данных
+                                </span>
+                            </label>
+                        </div>
+                        <button type="submit" onclick="event.preventDefault();" class="join__content__form__submit">Отправить</button>
+                    </form>
+                </div>
             </div>
         </section>
-        <footer id="footer" class="footer"></footer>
+        <footer id="footer" class="footer">
+            <div class="container">
+                <nav class="footer__nav">
+                    <a href="/">
+                        <img src="./resources/icons/logo.svg" alt="Logotype link" class="">
+                    </a>
+                    <ul class="footer__nav__links-list">
+                        <li class="footer__nav__links-list__item">
+                            <a href="" class="footer__nav__links-list__item__link">Сопровождение бизнеса</a>
+                        </li>
+                        <li class="footer__nav__links-list__item">
+                            <a href="" class="footer__nav__links-list__item__link">Дист. обучение</a>
+                        </li>
+                        <li class="footer__nav__links-list__item">
+                            <a href="" class="footer__nav__links-list__item__link">Лицензирование</a>
+                        </li>
+                        <li class="footer__nav__links-list__item">
+                            <a href="" class="footer__nav__links-list__item__link">О нас</a>
+                        </li>
+                        <li class="footer__nav__links-list__item">
+                            <a href="" class="footer__nav__links-list__item__link">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__nav__social-list">
+                        <li class="footer__nav__social-list__item">
+                            <a href="#" class="footer__nav__social-list__item__link">
+                                <img src="./resources/icons/header/vk-icon.svg" alt="vk icon" class="footer__nav__social-list__item__link__icon">
+                            </a>
+                        </li>
+                        <li class="footer__nav__social-list__item">
+                            <a href="#" class="footer__nav__social-list__item__link">
+                                <img src="./resources/icons/header/mail.svg" alt="mail icon" class="footer__nav__social-list__item__link__icon">
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="footer__nav__call">
+                        заказать звонок
+                    </a>
+                </nav>
+                <div class="footer__copyright">
+                    © СЕВЕРО-ЗАПАДНЫЙ ЮРИДИЧЕСКИЙ ЦЕНТР "АЛЬЯНС" . 2023 г.
+                </div>
+            </div>
+        </footer>
     </div>
+    <script src="https://unpkg.com/imask"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

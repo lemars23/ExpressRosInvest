@@ -58,3 +58,11 @@ reviewsContentButtonsButtonLeft.addEventListener('click', () => {
         reviewsContentItems.style.left = positionReviewsContentItems + 'px';
     }
 });
+
+
+IMask(
+    document.querySelector('.join__content__form__input__number'), 
+    {
+        mask: '+{7}(000) 000 - 00 - 00'
+    }
+)

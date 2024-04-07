@@ -29,6 +29,10 @@ p {
     margin: 0 auto;
 }
 
+.color-accent {
+    color: $AccentColor;
+}
+
 @media screen and (min-width: 1296px) {
     body {
         font-size: 18px;
@@ -39,7 +43,7 @@ p {
 
     .wrapper {
         display: grid;
-        grid-template-rows: 96px 727px 997px 1090px 946px 905px;
+        grid-template-rows: 96px 727px 997px 1090px 946px 905px 248px;
 
         background-color: $BackgroundColor;
 
@@ -51,7 +55,7 @@ p {
         width: 1296px;
     }
 
-    .header {
+    .header, .footer {
         background-color: $AccentColor;
 
         display: flex;
@@ -400,8 +404,129 @@ p {
     }
 
     .join {
+        display: flex;
+        align-items: center;
         .container {
-            padding-top: 160px;
+            padding: 160px 0 208px;
+
+        }
+
+// Join content
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            // padding: 48px 60px 208px 0;
+            align-items: center;
+
+// Join title
+            &__title {
+                width: 49.1%;
+                font-size: 3.111em;
+                font-weight: 800;
+                line-height: 1.25;
+            }
+// Form
+            &__form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 32.85%;
+// Title form
+                &__title {
+                    font-size: 1.778em;
+                    text-align: center;
+                    font-weight: 700;
+                    // margin-bottom: 40px;
+                }
+// Input form
+                &__input {
+                    width: 87.65%;
+                    padding: 18.1px 24px;
+                    &:not(:first-child) {
+                        margin-top: 24px;
+                    }
+
+                    &:focus,
+                    &:active {
+                        outline: 1px solid #1fa8ad;
+                        border: 0;
+
+                        transition: all 0.1s ease;
+                    }
+
+                }
+
+                
+// Checkbox form
+                &__checkbox {
+                    margin-top: 28px;
+
+                    color: $AccentColor;
+
+
+                    &__label {
+                        display: flex;
+                        
+                        // Checkbox input form
+                        &__input {
+                            display: none;
+                        }
+
+                        &__fake  {
+                            display: inline-block;
+                            height: 20px;
+                            width: 20px;
+                            border: 1px solid $AccentColor;
+                        }
+
+                        &__fake::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            display: block;
+                            width: 20px;
+                            height: 20px;
+                            background-color: $AccentColor;
+                            opacity: 0;
+                            z-index: 2;
+                        }
+                    }
+
+                    &:checked + &__fake::before {
+                        opacity: 1;
+                    }
+                }
+// Button form
+                &__submit {
+                    margin-top: 36px;
+                    width: 45.1%;
+                    padding: 18px 40px;
+                    border: 0;
+                    background-color: $AccentColor;
+                    font-size: 0.88em;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: #fff;
+                    letter-spacing: 0.05em;
+                }
+            }
+        }
+    }
+
+    .footer {
+        .container {
+            display: flex;
+            flex-direction: column;
+            row-gap: 92px;
+        }
+
+        &__copyright {
+            color: #fff;
+            font-size: 0.7222em;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 0.05em;
         }
     }
 }
